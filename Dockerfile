@@ -4,6 +4,8 @@ MAINTAINER Chafik Hnini "chafik.hnini@gmail.com"
 
 RUN gem install cocoapods:1.6.1 fastlane:2.120.0 --no-document
 
+RUN echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
+
 # JDK
 ARG JAVA_VERSION=8
 RUN apt-get update && \
