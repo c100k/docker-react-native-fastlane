@@ -2,7 +2,7 @@ FROM starefossen/ruby-node:latest
 
 MAINTAINER Chafik Hnini "chafik.hnini@gmail.com"
 
-RUN gem install cocoapods-1.6.1 fastlane-2.120.0 --no-document
+RUN gem install cocoapods:1.6.1 fastlane:2.120.0 --no-document
 
 # JDK
 ARG JAVA_VERSION=8
